@@ -107,9 +107,17 @@ const restaurantController = {
       })
       .catch(err => next(err))
   },
+<<<<<<< HEAD
   getTopRestaurants: async (req, res, next) => {
     await Restaurant.findAll({
       include: [{ model: User, as: 'FavoritedUsers' }]
+=======
+  getTopRestaurants: (req, res, next) => {
+    return Restaurant.findAll({
+      include: [{
+        model: User, as: 'FavoritedUsers'
+      }]
+>>>>>>> R05
     })
       .then(restaurants => {
         restaurants = restaurants.map(r => ({
