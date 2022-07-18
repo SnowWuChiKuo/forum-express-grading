@@ -45,10 +45,10 @@ const userController = {
     await User.findByPk(req.params.id, {
       include: [{ model: Comment, include: Restaurant }]
     })
-      .then(user => {
-        if (!user) throw new Error('使用者不存在!')
-        user = user.toJSON()
-        return res.render('users/profile', { currentUser, user })
+      .then(account => {
+        if (!account) throw new Error('使用者不存在!')
+        account = account.toJSON()
+        return res.render('users/profile', { currentUser, account })
       })
       .catch(err => next(err))
   },
