@@ -1,10 +1,6 @@
 const bcrypt = require('bcryptjs')
 const { imgurFileHandler } = require('../helpers/file-helpers')
-<<<<<<< HEAD
 const { User, Comment, Restaurant, Favorite, Like, Followship } = require('../models')
-=======
-const { User, Comment, Restaurant } = require('../models')
->>>>>>> R03
 const { getUser } = require('../helpers/auth-helpers')
 
 const userController = {
