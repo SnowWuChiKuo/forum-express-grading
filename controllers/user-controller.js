@@ -3,7 +3,6 @@ const { imgurFileHandler } = require('../helpers/file-helpers')
 const { User, Comment, Restaurant, Favorite, Like, Followship } = require('../models')
 const { getUser } = require('../helpers/auth-helpers')
 
-
 const userController = {
   signUpPage: (req, res) => {
     res.render('signup')
